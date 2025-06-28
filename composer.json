@@ -1,0 +1,17 @@
+{
+    "name": "classic/http-tools",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Classic\\HttpTools\\": "src/",
+            "Test\\" : "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Masoud4",
+            "email": "ashrafianpur.masoud@gmail.com"
+        }
+    ],
+    "require": {}
+}
