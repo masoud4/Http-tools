@@ -5,8 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use masoud4\HttpTools\Http\Request;
 use masoud4\HttpTools\Http\Response;
 use masoud4\HttpTools\Validation\Validator;
-use masoud4\HttpTools\Validation\ValidationRuleInterface; // For custom class rule example
-
+use masoud4\HttpTools\Validation\ValidationRuleInterface;
 // --- Helper to display errors and notifications ---
 function displayMessages(Response $response, array $errors = []): string {
     $html = '';

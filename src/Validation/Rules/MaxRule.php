@@ -14,16 +14,18 @@ class MaxRule implements ValidationRuleInterface
 
     public function validate(string $field, mixed $value, array $data): bool
     {
+
+        if (is_numeric($value)) {
+            return $value <= $this->max;
+        }
         if (is_string($value)) {
             return mb_strlen($value) <= $this->max;
         }
-        if (is_numeric($value)) {
-            return (float) $value <= $this->max;
-        }
+       
         if (is_array($value)) {
             return count($value) <= $this->max;
         }
-        return false; // Cannot validate max for other types
+        return false;
     }
 
     public function getMessage(string $field): string

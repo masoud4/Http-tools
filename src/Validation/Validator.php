@@ -1,4 +1,5 @@
 <?php
+
 namespace masoud4\HttpTools\Validation;
 
 use masoud4\HttpTools\Errors\ErrorBag;
@@ -60,10 +61,16 @@ class Validator
         'required_if' => RequiredIfRule::class,
     ];
 
-    public function __construct(array $data)
+    public function __construct(?array $data = null)
+    {
+        if ($data) {
+            $this->data = $this->trimStrings($data);
+        }
+        $this->errorBag = new ErrorBag();
+    }
+    public function setData(array $data)
     {
         $this->data = $this->trimStrings($data);
-        $this->errorBag = new ErrorBag();
     }
 
     /**
@@ -99,6 +106,27 @@ class Validator
         return $this;
     }
 
+    /**
+     * Quickly validate data with rules and custom messages in one call.
+     * Returns validated data array on success, or false on failure.
+     *
+     * @param array $data
+     * @param array $rules
+     * @param array $messages
+     * @return array|false
+     */
+    public function validateData(array $data, array $rules, array $messages = [])
+    {
+        $this->setData($data);
+        $this->setRules($rules);
+        $this->setMessages($messages);
+
+        if ($this->validate()) {
+            return $this->validatedData();
+        }
+
+        return false;
+    }
     /**
      * Perform the validation.
      * @return bool True if all validation passes, false otherwise.
@@ -149,14 +177,14 @@ class Validator
             if ($hasRequiredRule) {
                 $isActuallyRequired = (new RequiredRule())->validate($field, $value, $this->data);
                 if (!$isActuallyRequired) { // If required but empty, add error
-                     $this->errorBag->add($field, $this->customMessages["{$field}.required"] ?? $this->customMessages['required'] ?? (new RequiredRule())->getMessage($field));
-                     if ($bail) continue; // Skip further validation for this field if bail is active
+                    $this->errorBag->add($field, $this->customMessages["{$field}.required"] ?? $this->customMessages['required'] ?? (new RequiredRule())->getMessage($field));
+                    if ($bail) continue; // Skip further validation for this field if bail is active
                 }
             } elseif ($hasRequiredIfRule) {
                 // For required_if, we need to instantiate it to check its condition
                 $ruleParam = $parsedRules['required_if']['param'];
                 $requiredIfInstance = new RequiredIfRule($ruleParam);
-                
+
                 // If required_if's validate returns false, it means the field *is* required but empty
                 if (!$requiredIfInstance->validate($field, $value, $this->data)) {
                     $isActuallyRequired = true; // It's required and empty
@@ -186,6 +214,8 @@ class Validator
                 if (in_array($ruleName, ['bail', 'required', 'required_if'])) {
                     continue;
                 }
+
+
 
                 $ruleParam = $ruleInfo['param'];
                 $customMessage = $ruleInfo['message'];
@@ -234,6 +264,41 @@ class Validator
         $this->validatedData = $this->castValidatedData($this->validatedData, $this->rules);
         return !$this->errorBag->has();
     }
+    /**
+     * Validate data with rules and messages, or exit with error message.
+     * This is a controller-friendly shortcut for validation with immediate failure handling.
+     *
+     * @param array $data
+     * @param array $rules
+     * @param array $messages
+     * @param callable|null $onError Optional closure to handle errors (e.g. redirect)
+     * @return array
+     */
+    public function validateOrFail(array $data, array $rules, array $messages = [], ?callable $onError = null): array
+    {
+        $this->setData($data);
+        $this->setRules($rules);
+        $this->setMessages($messages);
+
+        if ($this->validate()) {
+            return $this->validatedData();
+        }
+
+        $errors = $this->errors()->get();
+
+        if ($onError) {
+            // Let user handle the failure (redirect, flash, etc.)
+            $onError($errors);
+            exit;
+        }
+
+        // Default behavior: exit with JSON error
+        header('Content-Type: application/json', true, 400);
+        exit(json_encode([
+            'success' => false,
+            'errors' => $errors,
+        ]));
+    }
 
     /**
      * Check if a value is effectively empty.
@@ -254,7 +319,7 @@ class Validator
         // For files, consider it empty if UPLOAD_ERR_NO_FILE
         // Note: For 'required' rules on files, it's typically checked if 'tmp_name' is empty/file not uploaded
         if (is_array($value) && isset($value['error']) && $value['error'] === UPLOAD_ERR_NO_FILE) {
-             return true;
+            return true;
         }
         return false;
     }
@@ -346,7 +411,7 @@ class Validator
                     case 'float': // If you add a float rule
                         $data[$field] = (float) $value;
                         break;
-                    // String and array types usually don't need explicit casting unless they are not already
+                        // String and array types usually don't need explicit casting unless they are not already
                 }
             }
         }
