@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\MaxRule;
+use masoud4\HttpTools\Validation\Rules\MaxRule;
 
 class MaxRuleTest extends TestCase
 {

@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\UrlRule;
+use masoud4\HttpTools\Validation\Rules\UrlRule;
 
 class UrlRuleTest extends TestCase
 {

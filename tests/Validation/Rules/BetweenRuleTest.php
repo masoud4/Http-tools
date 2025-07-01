@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\BetweenRule;
+use masoud4\HttpTools\Validation\Rules\BetweenRule;
 
 class BetweenRuleTest extends TestCase
 {

@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\ArrayTypeRule;
+use masoud4\HttpTools\Validation\Rules\ArrayTypeRule;
 
 class ArrayTypeRuleTest extends TestCase
 {

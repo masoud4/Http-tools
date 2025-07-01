@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\SameRule;
+use masoud4\HttpTools\Validation\Rules\SameRule;
 
 class SameRuleTest extends TestCase
 {

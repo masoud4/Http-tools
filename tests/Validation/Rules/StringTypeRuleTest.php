@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\StringTypeRule;
+use masoud4\HttpTools\Validation\Rules\StringTypeRule;
 
 class StringTypeRuleTest extends TestCase
 {

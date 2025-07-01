@@ -1,12 +1,12 @@
-# 🚀 Classic/HttpTools
+# 🚀 masoud4/HttpTools
 
-A robust and simple PHP library providing essential tools for HTTP request and response management, alongside a flexible and extendable data validation system for classic PHP applications. Designed for clarity, ease of use, and integration into existing projects without heavy frameworks.
+A robust and simple PHP library providing essential tools for HTTP request and response management, alongside a flexible and extendable data validation system for masoud4 PHP applications. Designed for clarity, ease of use, and integration into existing projects without heavy frameworks.
 
 ---
 
-[![Packagist Version](https://img.shields.io/packagist/v/classic/http-tools?style=flat-square&label=latest%20version)](https://packagist.org/packages/classic/http-tools)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/classic/http-tools?style=flat-square)](https://packagist.org/packages/classic/http-tools)
-[![License](https://img.shields.io/packagist/l/classic/http-tools?style=flat-square)](LICENSE)
+[![Packagist Version](https://img.shields.io/packagist/v/masoud4/http-tools?style=flat-square&label=latest%20version)](https://packagist.org/packages/masoud4/http-tools)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/masoud4/http-tools?style=flat-square)](https://packagist.org/packages/masoud4/http-tools)
+[![License](https://img.shields.io/packagist/l/masoud4/http-tools?style=flat-square)](LICENSE)
 <!-- Add GitHub Actions/CI badge here if you set it up, e.g.:
 [![Build Status](https://img.shields.io/github/actions/workflow/status/masoud4/Http-tools/main.yml?branch=main&style=flat-square)](https://github.com/masoud4/Http-tools/actions?query=workflow%3AMain)
 -->
@@ -39,7 +39,7 @@ This library is designed for easy integration into any PHP project using [Compos
 1.  **Add the package to your project:**
 
     ```bash
-    composer require classic/http-tools
+    composer require masoud4/http-tools
     ```
 
 2.  **Optionally, for development and testing (highly recommended):**
@@ -52,7 +52,7 @@ This library is designed for easy integration into any PHP project using [Compos
 
     ```json
     {
-        "name": "classic/http-tools",
+        "name": "masoud4/http-tools",
         "description": "A simple PHP library for HTTP request/response handling and data validation.",
         "type": "library",
         "license": "BSD-3-Clause",
@@ -61,7 +61,7 @@ This library is designed for easy integration into any PHP project using [Compos
         "minimum-stability": "stable",
         "autoload": {
             "psr-4": {
-                "Classic\\HttpTools\\": "src/"
+                "masoud4\\HttpTools\\": "src/"
             }
         },
         "autoload-dev": {
@@ -108,7 +108,7 @@ This library is designed for easy integration into any PHP project using [Compos
 
 ## 📚 Usage Examples
 
-### 📥 Request Handling (`Classic\HttpTools\Http\Request`)
+### 📥 Request Handling (`masoud4\HttpTools\Http\Request`)
 
 Parse incoming HTTP requests and access various input types seamlessly.
 
@@ -118,7 +118,7 @@ Parse incoming HTTP requests and access various input types seamlessly.
 // Include Composer's autoloader if not already done in your bootstrap
 require_once 'vendor/autoload.php';
 
-use Classic\HttpTools\Http\Request;
+use masoud4\HttpTools\Http\Request;
 
 // Typically, in a web environment, Request is instantiated once without arguments,
 // as it automatically reads from superglobals ($_GET, $_POST, $_SERVER, etc.).

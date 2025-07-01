@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\RequiredRule;
+use masoud4\HttpTools\Validation\Rules\RequiredRule;
 
 class RequiredRuleTest extends TestCase
 {

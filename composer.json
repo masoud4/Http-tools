@@ -1,5 +1,5 @@
 {
-    "name": "classic/http-tools",
+    "name": "masoud4/http-tools",
     "description": "A simple PHP library for HTTP request/response handling and data validation.",
     "type": "library",
     "license": "MIT",
@@ -12,11 +12,11 @@
         "error-bag",
         "php"
     ],
-    "homepage": "https://github.com/Masoud4/classic-http-tools",
+    "homepage": "https://github.com/Masoud4/masoud4-http-tools",
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Classic\\HttpTools\\": "src/"
+            "masoud4\\HttpTools\\": "src/"
         }
     },
     "autoload-dev": {

@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\DifferentRule;
+use masoud4\HttpTools\Validation\Rules\DifferentRule;
 
 class DifferentRuleTest extends TestCase
 {

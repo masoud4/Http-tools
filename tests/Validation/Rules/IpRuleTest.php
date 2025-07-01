@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\IpRule;
+use masoud4\HttpTools\Validation\Rules\IpRule;
 
 class IpRuleTest extends TestCase
 {

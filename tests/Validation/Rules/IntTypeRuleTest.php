@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\IntTypeRule;
+use masoud4\HttpTools\Validation\Rules\IntTypeRule;
 
 class IntTypeRuleTest extends TestCase
 {

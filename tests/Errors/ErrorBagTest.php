@@ -2,7 +2,7 @@
 namespace Tests\Errors;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Errors\ErrorBag;
+use masoud4\HttpTools\Errors\ErrorBag;
 
 class ErrorBagTest extends TestCase
 {

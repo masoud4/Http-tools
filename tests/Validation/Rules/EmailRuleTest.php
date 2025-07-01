@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\EmailRule;
+use masoud4\HttpTools\Validation\Rules\EmailRule;
 
 class EmailRuleTest extends TestCase
 {

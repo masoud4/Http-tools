@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\JsonRule;
+use masoud4\HttpTools\Validation\Rules\JsonRule;
 
 class JsonRuleTest extends TestCase
 {

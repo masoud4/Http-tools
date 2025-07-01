@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\MinRule;
+use masoud4\HttpTools\Validation\Rules\MinRule;
 
 class MinRuleTest extends TestCase
 {

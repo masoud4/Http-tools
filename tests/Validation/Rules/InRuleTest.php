@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\InRule;
+use masoud4\HttpTools\Validation\Rules\InRule;
 
 class InRuleTest extends TestCase
 {

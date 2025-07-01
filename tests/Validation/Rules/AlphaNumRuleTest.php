@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\AlphaNumRule;
+use masoud4\HttpTools\Validation\Rules\AlphaNumRule;
 
 class AlphaNumRuleTest extends TestCase
 {

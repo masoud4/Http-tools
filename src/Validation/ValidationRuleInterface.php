@@ -1,5 +1,5 @@
 <?php
-namespace Classic\HttpTools\Validation; 
+namespace masoud4\HttpTools\Validation; 
 
 interface ValidationRuleInterface
 {

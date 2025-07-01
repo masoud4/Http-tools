@@ -1,29 +1,29 @@
 <?php
-namespace Classic\HttpTools\Validation;
+namespace masoud4\HttpTools\Validation;
 
-use Classic\HttpTools\Errors\ErrorBag;
-use Classic\HttpTools\Validation\Rules\AlphaNumRule;
-use Classic\HttpTools\Validation\Rules\AlphaRule;
-use Classic\HttpTools\Validation\Rules\ArrayTypeRule;
-use Classic\HttpTools\Validation\Rules\BetweenRule;
-use Classic\HttpTools\Validation\Rules\BoolTypeRule;
-use Classic\HttpTools\Validation\Rules\DateRule;
-use Classic\HttpTools\Validation\Rules\DifferentRule;
-use Classic\HttpTools\Validation\Rules\EmailRule;
-use Classic\HttpTools\Validation\Rules\InRule;
-use Classic\HttpTools\Validation\Rules\IntTypeRule;
-use Classic\HttpTools\Validation\Rules\IpRule;
-use Classic\HttpTools\Validation\Rules\JsonRule;
-use Classic\HttpTools\Validation\Rules\MaxRule;
-use Classic\HttpTools\Validation\Rules\MinRule;
-use Classic\HttpTools\Validation\Rules\NotInRule;
-use Classic\HttpTools\Validation\Rules\RegexRule;
-use Classic\HttpTools\Validation\Rules\RequiredIfRule;
-use Classic\HttpTools\Validation\Rules\RequiredRule;
-use Classic\HttpTools\Validation\Rules\SameRule;
-use Classic\HttpTools\Validation\Rules\SizeRule;
-use Classic\HttpTools\Validation\Rules\StringTypeRule;
-use Classic\HttpTools\Validation\Rules\UrlRule;
+use masoud4\HttpTools\Errors\ErrorBag;
+use masoud4\HttpTools\Validation\Rules\AlphaNumRule;
+use masoud4\HttpTools\Validation\Rules\AlphaRule;
+use masoud4\HttpTools\Validation\Rules\ArrayTypeRule;
+use masoud4\HttpTools\Validation\Rules\BetweenRule;
+use masoud4\HttpTools\Validation\Rules\BoolTypeRule;
+use masoud4\HttpTools\Validation\Rules\DateRule;
+use masoud4\HttpTools\Validation\Rules\DifferentRule;
+use masoud4\HttpTools\Validation\Rules\EmailRule;
+use masoud4\HttpTools\Validation\Rules\InRule;
+use masoud4\HttpTools\Validation\Rules\IntTypeRule;
+use masoud4\HttpTools\Validation\Rules\IpRule;
+use masoud4\HttpTools\Validation\Rules\JsonRule;
+use masoud4\HttpTools\Validation\Rules\MaxRule;
+use masoud4\HttpTools\Validation\Rules\MinRule;
+use masoud4\HttpTools\Validation\Rules\NotInRule;
+use masoud4\HttpTools\Validation\Rules\RegexRule;
+use masoud4\HttpTools\Validation\Rules\RequiredIfRule;
+use masoud4\HttpTools\Validation\Rules\RequiredRule;
+use masoud4\HttpTools\Validation\Rules\SameRule;
+use masoud4\HttpTools\Validation\Rules\SizeRule;
+use masoud4\HttpTools\Validation\Rules\StringTypeRule;
+use masoud4\HttpTools\Validation\Rules\UrlRule;
 
 
 class Validator

@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\NotInRule;
+use masoud4\HttpTools\Validation\Rules\NotInRule;
 
 class NotInRuleTest extends TestCase
 {

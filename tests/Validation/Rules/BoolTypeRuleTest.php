@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\BoolTypeRule;
+use masoud4\HttpTools\Validation\Rules\BoolTypeRule;
 
 class BoolTypeRuleTest extends TestCase
 {

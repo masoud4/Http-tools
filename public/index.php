@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Classic\HttpTools\Http\Request;
-use Classic\HttpTools\Http\Response;
-use Classic\HttpTools\Validation\Validator;
-use Classic\HttpTools\Validation\ValidationRuleInterface; // For custom class rule example
+use masoud4\HttpTools\Http\Request;
+use masoud4\HttpTools\Http\Response;
+use masoud4\HttpTools\Validation\Validator;
+use masoud4\HttpTools\Validation\ValidationRuleInterface; // For custom class rule example
 
 // --- Helper to display errors and notifications ---
 function displayMessages(Response $response, array $errors = []): string {

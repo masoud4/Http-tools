@@ -1,5 +1,5 @@
 <?php
-namespace Classic\HttpTools\Errors; // Correct namespace
+namespace masoud4\HttpTools\Errors; // Correct namespace
 
 class ErrorBag
 {

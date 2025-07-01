@@ -2,7 +2,7 @@
 namespace Tests\Http;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Http\Request;
+use masoud4\HttpTools\Http\Request;
 
 /**
  * @runInSeparateProcess

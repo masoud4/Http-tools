@@ -2,7 +2,7 @@
 namespace Tests\Validation\Rules;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Validation\Rules\RegexRule;
+use masoud4\HttpTools\Validation\Rules\RegexRule;
 
 class RegexRuleTest extends TestCase
 {

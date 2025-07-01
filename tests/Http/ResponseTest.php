@@ -2,7 +2,7 @@
 namespace Tests\Http;
 
 use PHPUnit\Framework\TestCase;
-use Classic\HttpTools\Http\Response;
+use masoud4\HttpTools\Http\Response;
 
 class ResponseTest extends TestCase
 {

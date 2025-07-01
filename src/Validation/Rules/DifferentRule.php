@@ -1,7 +1,7 @@
 <?php
-namespace Classic\HttpTools\Validation\Rules;
+namespace masoud4\HttpTools\Validation\Rules;
 
-use Classic\HttpTools\Validation\ValidationRuleInterface;
+use masoud4\HttpTools\Validation\ValidationRuleInterface;
 
 class DifferentRule implements ValidationRuleInterface
 {
